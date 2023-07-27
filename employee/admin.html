@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-top: 100px;
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .container ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .container li {
+      float: left;
+    }
+
+    .container li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .container li a:hover {
+      background-color: #ddd;
+    }
+
+    .container .tab-content {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .container .tab-content.active {
+      display: block;
+    }
+  </style>
+  <script>
+    function openTab(tabName) {
+      var i, tabContent;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Dashboard</h2>
+    <ul>
+      <li><a href="javascript:void(0)" onclick="openTab('managers')">Managers</a></li>
+      <li><a href="javascript:void(0)" onclick="openTab('employees')">Employees</a></li>
+    </ul>
+
+    <div id="managers" class="tab-content active">
+      <h3>Managers</h3>
+      <!-- Content for Managers Tab -->
+      <p>This is the content for the Managers tab.</p>
+    </div>
+
+    <div id="employees" class="tab-content">
+      <h3>Employees</h3>
+      <!-- Content for Employees Tab -->
+      <p>This is the content for the Employees tab.</p>
+    </div>
+  </div>
+</body>
+</html>
